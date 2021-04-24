@@ -10,7 +10,7 @@ RUN addgroup -g 1000 minecraft \
   && mkdir -m 775 /data \
   && chown minecraft:minecraft /data
 
-ENV VELOCITY_VERSION 1.1.4
+ENV VELOCITY_VERSION 1.1.5
 
 RUN apk add --no-cache -U curl \
   && curl -o /server.jar "https://versions.velocitypowered.com/download/$VELOCITY_VERSION.jar"
