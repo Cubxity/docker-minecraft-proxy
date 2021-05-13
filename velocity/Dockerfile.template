@@ -15,7 +15,6 @@ ENV VELOCITY_VERSION {VELOCITY_VERSION}
 RUN apk add --no-cache -U curl \
   && curl -o /server.jar "https://versions.velocitypowered.com/download/$VELOCITY_VERSION.jar"
 
-VOLUME ["/data"]
 WORKDIR /data
 
 ENV MEMORY="1G"
