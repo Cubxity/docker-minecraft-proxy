@@ -1,9 +1,9 @@
-FROM adoptopenjdk/openjdk11:jre-11.0.9.1_1-alpine
+FROM adoptopenjdk/openjdk16:jre-16.0.1_9-alpine
 
 LABEL org.opencontainers.image.documentation="https://github.com/Cubxity/docker-minecraft-proxy"
 LABEL org.opencontainers.image.authors="Cubxity <cubxity@protonmail.com>"
 LABEL org.opencontainers.image.source="https://github.com/Cubxity/docker-minecraft-proxy"
-LABEL org.opencontainers.image.version="velocity-adopt11"
+LABEL org.opencontainers.image.version="velocity-adopt16"
 
 RUN addgroup -g 1000 minecraft \
   && adduser -Ss /bin/false -u 1000 -G minecraft -h /home/minecraft minecraft \
