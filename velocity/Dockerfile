@@ -1,25 +1,26 @@
-FROM __RUNTIME__
+ARG RUNTIME
+ARG RUNTIME_NAME
+
+FROM $RUNTIME
 
 LABEL org.opencontainers.image.documentation="https://github.com/Cubxity/docker-minecraft-proxy"
 LABEL org.opencontainers.image.authors="Cubxity <cubxity@protonmail.com>"
 LABEL org.opencontainers.image.source="https://github.com/Cubxity/docker-minecraft-proxy"
-LABEL org.opencontainers.image.version="velocity-{RUNTIME_NAME}"
+LABEL org.opencontainers.image.version="velocity-$VELOCITY_VERSION-$RUNTIME_NAME"
+
+ARG VELOCITY_VERSION
 
 RUN addgroup -g 1000 minecraft \
   && adduser -Ss /bin/false -u 1000 -G minecraft -h /home/minecraft minecraft \
   && mkdir -m 775 /data \
-  && chown minecraft:minecraft /data
+  && chown minecraft:minecraft /data \
+  && wget -O /server.jar "https://versions.velocitypowered.com/download/$VELOCITY_VERSION.jar"
 
-ENV VELOCITY_VERSION {VELOCITY_VERSION}
-
-RUN apk add --no-cache -U curl \
-  && curl -o /server.jar "https://versions.velocitypowered.com/download/$VELOCITY_VERSION.jar"
-
-WORKDIR /data
+COPY bin/start.sh /start.sh
 
 ENV MEMORY="1G"
 
-COPY start.sh /start.sh
+WORKDIR /data
 ENTRYPOINT [ "/start.sh" ]
 
 USER minecraft

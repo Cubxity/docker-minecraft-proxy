@@ -20,8 +20,8 @@ This image makes use of Aikar's flags by default. The data directory is located 
 
 ## Variants
 
-> **WARNING:** Support for OpenJDK versions below 16 has been dropped, meaning they will no longer receive updates.
+> **NOTE:** AdoptOpenJDK 8 & 15 variants are deprecated. Support Non-LTS versions may be dropped at any time.
 
-Images are based on adoptopenjdk's alpine images.
+Images are based on AdoptOpenJDK's alpine images.
 
-- **Velocity**: `velocity-{runtime}`, example: `velocity-adopt16`.
+- **Velocity**: `velocity-{runtime}`, `velocity-{version}-{runtime}`, example: `velocity-adopt16`, `velocity-1.1.8-adopt16`.
