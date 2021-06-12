@@ -4,4 +4,4 @@ for flavor in velocity; do
   "./$flavor/build.sh"
 done
 
-docker push --all-tags cubxity/minecraft-server
+docker push --all-tags cubxity/minecraft-proxy
