@@ -5,7 +5,7 @@ chmod g+w /data
 
 # Copy content from /run/data/ to /data/.
 # This is useful for mounting read-only filesystem such as ConfigMaps in Kubernetes.
-if [ -f /run/data ]; then
+if [ -d /run/data ]; then
    cp -rf /run/data/ /
 fi
 
