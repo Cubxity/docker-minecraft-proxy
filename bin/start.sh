@@ -14,8 +14,8 @@ INIT_MEMORY=${INIT_MEMORY:=${MEMORY}}
 MAX_MEMORY=${MAX_MEMORY:=${MEMORY}}
 
 JVM_XX_OPTS="-XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15"
-JVM_OPTS="-Xms$INIT_MEMORY -Xmx$MAX_MEMORY"
-D_OPTS="-Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true"
+JVM_OPTS="-Xms$INIT_MEMORY -Xmx$MAX_MEMORY ${JVM_OPTS}"
+D_OPTS="${D_OPTS}"
 
 # Start the server
 # shellcheck disable=SC2086 disable=SC2068
