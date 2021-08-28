@@ -1,3 +1,7 @@
+[![License](https://img.shields.io/github/license/Cubxity/docker-minecraft-proxy?style=flat-square)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/Cubxity/docker-minecraft-proxy?style=flat-square)](https://github.com/Cubxity/docker-minecraft-proxy/issues)
+[![Discord](https://img.shields.io/badge/join-discord-blue?style=flat-square)](https://discord.gg/kDDhqJmPpA)
+
 # docker-minecraft-proxy
 
 Lightweight Docker images for Minecraft proxy.
