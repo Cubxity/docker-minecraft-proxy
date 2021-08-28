@@ -10,7 +10,7 @@ Lightweight Docker images for Minecraft proxy.
 $ docker run --rm -it -p 25565:25577 cubxity/minecraft-proxy:velocity-adopt16
 ```
 
-This image makes use of Aikar's flags by default. The data directory is located at `/data`.
+This image makes use of Velocity's recommended flags by default. The data directory is located at `/data`.
 
 ## Environment variables
 
