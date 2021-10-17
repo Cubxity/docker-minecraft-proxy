@@ -48,7 +48,7 @@ with `-java<version>-slim-bullseye`.
 - `velocity-java17-slim-bullseye`
 - `velocity-3.0.1-java17-slim-bullseye`
 
-### Eclipse Temurin Alpine (`temurin-alpine`)
+### Eclipse Temurin Alpine (`temurin*-alpine`)
 
 Supports `linux/amd64`.
 
