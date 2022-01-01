@@ -17,7 +17,7 @@ RUN groupadd -g 1000 minecraft \
   && mkdir -m 775 /data \
   && chown minecraft:minecraft /data \
   && apt-get update && apt-get install -y curl \
-  && curl -sfL -o /server.jar "https://papermc.io/api/v2/projects/velocity/versions/$VELOCITY_VERSION/builds/$VELOCITY_BUILD/downloads/velocity-$VELOCITY_VERSION-$VELOCITY_BUILD.jar"
+  && curl -sfL -o /server.jar "https://papermc.io/api/v2/projects/velocity/versions/$VELOCITY_VERSION/builds/$VELOCITY_BUILD/downloads/velocity-$VELOCITY_VERSION-$VELOCITY_BUILD.jar" \
   && echo "$VELOCITY_SHA256  /server.jar" | sha256sum -c -
 
 COPY bin/start.sh /start.sh
