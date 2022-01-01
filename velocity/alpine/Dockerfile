@@ -16,7 +16,7 @@ RUN addgroup -g 1000 minecraft \
   && adduser -Ss /bin/false -u 1000 -G minecraft -h /home/minecraft minecraft \
   && mkdir -m 775 /data \
   && chown minecraft:minecraft /data \
-  && wget -O /server.jar "https://papermc.io/api/v2/projects/velocity/versions/$VELOCITY_VERSION/builds/$VELOCITY_BUILD/downloads/velocity-$VELOCITY_VERSION-$VELOCITY_BUILD.jar"
+  && wget -O /server.jar "https://papermc.io/api/v2/projects/velocity/versions/$VELOCITY_VERSION/builds/$VELOCITY_BUILD/downloads/velocity-$VELOCITY_VERSION-$VELOCITY_BUILD.jar" \
   && echo "$VELOCITY_SHA256  /server.jar" | sha256sum -c -
 
 COPY bin/start.sh /start.sh
