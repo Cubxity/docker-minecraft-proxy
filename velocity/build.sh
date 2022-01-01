@@ -3,7 +3,7 @@ version=$(curl -s "https://nexus.velocitypowered.com/repository/maven-public/com
 
 curl -s https://papermc.io/api/v2/projects/velocity/ | jq -r -c ".versions[]" | while read -r version; do
   build=$(curl -s "https://papermc.io/api/v2/projects/velocity/versions/$version" | jq -r ".builds[-1]")
-  hash=$(curl -s "https://papermc.io/api/v2/projects/velocity/versions/$version/builds/$version" | jq -r ".downloads.application.sha256")
+  hash=$(curl -s "https://papermc.io/api/v2/projects/velocity/versions/$version/builds/$build" | jq -r ".downloads.application.sha256")
 
 echo "[velocity] building velocity-$version-$build-$RUNTIME_NAME"
 
