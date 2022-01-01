@@ -46,7 +46,7 @@ with `-java<version>-slim-bullseye`.
 **Examples:**
 
 - `velocity-java17-slim-bullseye`
-- `velocity-3.0.1-java17-slim-bullseye`
+- `velocity-3.0.1-95-java17-slim-bullseye`
 
 ### Eclipse Temurin Alpine (`temurin*-alpine`)
 
@@ -57,4 +57,4 @@ This image is based on Eclipse Temurin's Alpine image. The image format is suffi
 **Examples:**
 
 - `velocity-temurin17-alpine`
-- `velocity-3.0.1-temurin17-alpine`
+- `velocity-3.0.1-95-temurin17-alpine`
