@@ -35,7 +35,7 @@ This repository provides Azul Zulu and Eclipse Temurin based container images fo
 
 > **NOTE:** OpenJDK images are fully **deprecated** in favor of Azul Zulu and Temurin.
 
-### Azul Zulu (`java*-slim-bullseye`)
+### Azul Zulu Debian (`java*-slim-bullseye`)
 
 Supports `linux/amd64` and `linux/arm64`.
 
