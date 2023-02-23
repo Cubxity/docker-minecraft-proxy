@@ -31,16 +31,15 @@ This image makes use of Velocity's recommended flags by default. The data direct
 
 ## Variants
 
-This repository provides OpenJDK and Eclipse Temurin based container images for **Velocity**.
+This repository provides Azul Zulu and Eclipse Temurin based container images for **Velocity**.
 
-> **NOTE:** AdoptOpenJDK (`adopt*`) variants are **deprecated** in favor of OpenJDK and Temurin.
-> Support for non-LTS versions may be dropped at any time.
+> **NOTE:** OpenJDK images are fully **deprecated** in favor of Azul Zulu and Temurin.
 
-### OpenJDK (`java*-slim-bullseye`)
+### Azul Zulu Debian (`java*-slim-bullseye`)
 
 Supports `linux/amd64` and `linux/arm64`.
 
-This image is based on OpenJDK's Debian slim Bullseye image. The image format is suffixed
+This image is based on Azul Zulu's Debian slim Bullseye image. The image format is suffixed
 with `-java<version>-slim-bullseye`.
 
 **Examples:**
