@@ -11,7 +11,7 @@ Lightweight Docker/container images for Minecraft proxies.
 > **WARNING:** The following container is **ephemeral**, meaning any changes made to it will be discarded.
 
 ```shell
-$ docker run --rm -it -p 25565:25577 ghcr.io/cubxity/minecraft-proxy:velocity-java17-slim-bullseye
+$ docker run --rm -it -p 25565:25577 ghcr.io/cubxity/minecraft-proxy:velocity-temurin17-jammy
 ```
 
 - `--rm` removes the container on exit
@@ -33,20 +33,8 @@ This image makes use of Velocity's recommended flags by default. The data direct
 
 This repository provides OpenJDK and Eclipse Temurin based container images for **Velocity**.
 
-> **NOTE:** AdoptOpenJDK (`adopt*`) variants are **deprecated** in favor of OpenJDK and Temurin.
+> ⚠️ AdoptOpenJDK (`adopt*`) and OpenJDK (`java*`) variants are **deprecated** in favor of Eclipse Temurin.
 > Support for non-LTS versions may be dropped at any time.
-
-### OpenJDK (`java*-slim-bullseye`)
-
-Supports `linux/amd64` and `linux/arm64`.
-
-This image is based on OpenJDK's Debian slim Bullseye image. The image format is suffixed
-with `-java<version>-slim-bullseye`.
-
-**Examples:**
-
-- `velocity-java17-slim-bullseye`
-- `velocity-3.0.1-95-java17-slim-bullseye`
 
 ### Eclipse Temurin Alpine (`temurin*-alpine`)
 
@@ -57,4 +45,16 @@ This image is based on Eclipse Temurin's Alpine image. The image format is suffi
 **Examples:**
 
 - `velocity-temurin17-alpine`
-- `velocity-3.0.1-95-temurin17-alpine`
+- `velocity-3.2.0-SNAPSHOT-temurin17-alpine`
+
+### Eclipse Temurin Ubuntu Jammy (`temurin*-jammy`)
+
+Supports `linux/amd64` and `linux/arm64`.
+
+This image is based on Eclipse Temurin's Ubuntu Jammy Jellyfish image. The image format is suffixed
+with `-temurin<version>-jammy`.
+
+**Examples:**
+
+- `velocity-temurin17-jammy`
+- `velocity-3.2.0-SNAPSHOT-temurin17-jammy`
